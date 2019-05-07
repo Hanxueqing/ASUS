@@ -6,6 +6,11 @@ require.config({
         "jquery-cookie":"jquery.cookie",
         parabola:"parabola",
         index:"index",
+        "goods1-1":"goods1-1",
+        "goods1-2":"goods1-2",
+        "goods1-3":"goods1-3",
+        "sales-chart":"sales-chart",
+        "tab":"tab",
     },
     shim:{
         "jquery-cookie":['jquery'],
@@ -14,7 +19,13 @@ require.config({
         }
     }
 })
-require(["slide","index"],function(slide,index){
+require(["slide","index","goods1-1","goods1-2","goods1-3","goods1-4","sales-chart","tab"],function(slide,index,goods_1,goods_2,goods_3,goods_4,sales_chart,tab){
     slide.slide();
     index.index();
+    goods_1.goods_1();
+    goods_2.goods_2();
+    goods_3.goods_3();
+    goods_4.goods_4();
+    sales_chart.sales_chart();
+    tab.tab();
 })

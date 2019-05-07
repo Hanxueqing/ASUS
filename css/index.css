@@ -237,6 +237,29 @@ button .btn {
   color: #00a8ff;
   text-decoration: none; }
 
+#nav-list-show {
+  min-height: 89px;
+  background-color: #fff;
+  z-index: 10000;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+  transition: all .4s ease-in-out; }
+  #nav-list-show ul {
+    overflow: hidden;
+    width: 1226px;
+    background-color: #fff;
+    min-height: 50px;
+    margin: 0 auto; }
+    #nav-list-show ul li {
+      width: 175px;
+      height: 80px;
+      float: left;
+      text-align: center; }
+      #nav-list-show ul li img {
+        display: inline-block;
+        vertical-align: middle; }
+
 .banner {
   width: 100%;
   height: 500px;
@@ -495,6 +518,10 @@ button .btn {
   .m_middle_pro .hs_tab_head {
     overflow: hidden;
     background-color: #e0e0e0; }
+    .m_middle_pro .hs_tab_head .tab_head_active {
+      color: #fff;
+      background-color: #00a8ff;
+      border-right: 2px solid #00a8ff; }
     .m_middle_pro .hs_tab_head li {
       width: 258.3px;
       height: 40px;
@@ -512,6 +539,10 @@ button .btn {
   .m_middle_pro .hs_tab_body {
     height: 590px;
     margin-bottom: 35px; }
+    .m_middle_pro .hs_tab_body ul li:nth-child(2) {
+      display: none; }
+    .m_middle_pro .hs_tab_body ul li:nth-child(3) {
+      display: none; }
     .m_middle_pro .hs_tab_body .tab_body_item {
       height: 590px;
       background-color: #fff; }
@@ -590,3 +621,95 @@ button .btn {
       margin-left: 10px;
       font-size: 12px;
       text-decoration: line-through; }
+
+.m_right_top {
+  width: 205px;
+  float: left;
+  overflow: hidden; }
+  .m_right_top .sales-charts {
+    background-color: #fff;
+    font-size: 14px; }
+    .m_right_top .sales-charts .hd {
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      color: #fff;
+      background-color: #00a8ff; }
+      .m_right_top .sales-charts .hd h2 {
+        font-size: 16px;
+        font-weight: normal; }
+    .m_right_top .sales-charts .bd {
+      overflow: hidden; }
+      .m_right_top .sales-charts .bd .goods-list {
+        padding: 0 6px 0 10px; }
+        .m_right_top .sales-charts .bd .goods-list li:last-child {
+          border-bottom: none; }
+        .m_right_top .sales-charts .bd .goods-list .goods-item {
+          border-bottom: 1px solid #f2f2f2;
+          overflow: hidden;
+          position: relative;
+          padding-top: 6px; }
+          .m_right_top .sales-charts .bd .goods-list .goods-item .goods-num {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            color: #fff;
+            background: url(../images/sales_chart.png) center center no-repeat;
+            float: left;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 14px; }
+          .m_right_top .sales-charts .bd .goods-list .goods-item .goods-pic {
+            display: block;
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            float: left; }
+            .m_right_top .sales-charts .bd .goods-list .goods-item .goods-pic img {
+              width: 100%; }
+          .m_right_top .sales-charts .bd .goods-list .goods-item .goods-info {
+            width: 109px;
+            margin-top: 16px;
+            float: left;
+            line-height: 40px;
+            margin-bottom: 9px;
+            overflow: hidden; }
+            .m_right_top .sales-charts .bd .goods-list .goods-item .goods-info .goods-name {
+              height: 32px;
+              overflow: hidden;
+              margin-bottom: 0;
+              max-height: 50px;
+              font-size: 100%; }
+              .m_right_top .sales-charts .bd .goods-list .goods-item .goods-info .goods-name a {
+                white-space: normal;
+                line-height: 16px;
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: 400; }
+            .m_right_top .sales-charts .bd .goods-list .goods-item .goods-info .goods-price {
+              display: block;
+              margin-top: 8px;
+              line-height: 20px; }
+              .m_right_top .sales-charts .bd .goods-list .goods-item .goods-info .goods-price i {
+                color: #fe0100;
+                font-style: normal; }
+        .m_right_top .sales-charts .bd .goods-list .ga-product {
+          height: 60px; }
+          .m_right_top .sales-charts .bd .goods-list .ga-product .goods-num {
+            color: #00a8ff;
+            background: none;
+            top: 6px; }
+          .m_right_top .sales-charts .bd .goods-list .ga-product .goods-pic {
+            display: none; }
+          .m_right_top .sales-charts .bd .goods-list .ga-product .goods-info {
+            margin-left: 40px; }
+            .m_right_top .sales-charts .bd .goods-list .ga-product .goods-info .goods-name {
+              position: absolute;
+              top: 6px; }
+              .m_right_top .sales-charts .bd .goods-list .ga-product .goods-info .goods-name a {
+                line-height: 40px; }
+            .m_right_top .sales-charts .bd .goods-list .ga-product .goods-info .goods-price {
+              display: none; }
