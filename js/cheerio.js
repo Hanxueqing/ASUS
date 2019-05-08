@@ -6,7 +6,7 @@ const http = require("http");
 const https = require("https");
 
 //2-https://www.lagou.com/ 爬取拉钩网菜单页
-var url = "https://www.lagou.com/";
+var url = "https://www.asus.com.cn/";
 
 https.get(url,function(res){//response 响应对象
     var html = "";//拼接下载下来的数据的
@@ -37,8 +37,8 @@ function filterMenu(html){
     // $(".mainNavs .menu_box h2").each(function(item){
     //     arr.push($(item).html());
     // })
-    $(".menu_main").each(function(index,item){
-        arr.push($(item).find("h2").text().trim());
+    $(".cata-img").each(function(index,item){
+        arr.push($(item).find("img").attr("src"));
     })
     return arr;
 }

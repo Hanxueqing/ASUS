@@ -9,8 +9,36 @@ require.config({
         "goods1-1":"goods1-1",
         "goods1-2":"goods1-2",
         "goods1-3":"goods1-3",
+        "goods1-4":"goods1-4",
+        "goods2-1":"goods2-1",
+        "goods2-2":"goods2-2",
+        "goods2-3":"goods2-3",
+        "goods2-4":"goods2-4",
+        "goods2-5":"goods2-5",
+        "goods2-6":"goods2-6",
         "sales-chart":"sales-chart",
-        "tab":"tab",
+        "tab_1":"tab_1",
+        "tab_2":"tab_2",
+        "tab_3":"tab_3",
+        "tab_4":"tab_4",
+        "tab_5":"tab_5",
+        "nav_1":"nav_1",
+        "nav_2":"nav_2",
+        "nav_3":"nav_3",
+        "nav_4":"nav_4",
+        "nav_tab":"nav_tab",
+        "sidebar_1":"sidebar_1",
+        "sidebar_2":"sidebar_2",
+        "sidebar_3":"sidebar_3",
+        "sidebar_4":"sidebar_4",
+        "sidebar_5":"sidebar_5",
+        "sidebar_6":"sidebar_6",
+        "sidebar_7":"sidebar_7",
+        "sidebar_8":"sidebar_8",
+        "sidebar_tab":"sidebar_tab",
+        // 商品区轮播图
+        "module_slide_1":"module_slide_1",
+        "module_slide_2":"module_slide_2",
     },
     shim:{
         "jquery-cookie":['jquery'],
@@ -19,13 +47,40 @@ require.config({
         }
     }
 })
-require(["slide","index","goods1-1","goods1-2","goods1-3","goods1-4","sales-chart","tab"],function(slide,index,goods_1,goods_2,goods_3,goods_4,sales_chart,tab){
+require(["slide","index","goods1-1","goods1-2","goods1-3","goods1-4","goods2-1","goods2-2","goods2-3","goods2-4","goods2-5","goods2-6","sales-chart","tab_1","tab_2","tab_3","tab_4","tab_5","nav_1","nav_2","nav_3","nav_4","nav_tab","sidebar_1","sidebar_2","sidebar_3","sidebar_4","sidebar_5","sidebar_6","sidebar_7","sidebar_8","sidebar_tab","module_slide_1","module_slide_2"],function(slide,index,goods_1_1,goods_1_2,goods_1_3,goods_1_4,goods_2_1,goods_2_2,goods_2_3,goods_2_4,goods_2_5,goods_2_6,sales_chart,tab_1,tab_2,tab_3,tab_4,tab_5,nav_1,nav_2,nav_3,nav_4,nav_tab,sidebar_1,sidebar_2,sidebar_3,sidebar_4,sidebar_5,sidebar_6,sidebar_7,sidebar_8,sidebar_tab,module_slide_1,module_slide_2){
     slide.slide();
     index.index();
-    goods_1.goods_1();
-    goods_2.goods_2();
-    goods_3.goods_3();
-    goods_4.goods_4();
+    goods_1_1.goods_1_1();
+    goods_1_2.goods_1_2();
+    goods_1_3.goods_1_3();
+    goods_1_4.goods_1_4();
+    goods_2_1.goods_2_1();
+    goods_2_2.goods_2_2();
+    goods_2_3.goods_2_3();
+    goods_2_4.goods_2_4();
+    goods_2_5.goods_2_5();
+    goods_2_6.goods_2_6();
     sales_chart.sales_chart();
-    tab.tab();
+    tab_1.tab_1();
+    tab_2.tab_2();
+    tab_3.tab_3();
+    tab_4.tab_4();
+    tab_5.tab_5();
+    nav_1.nav_1();
+    nav_2.nav_2();
+    nav_3.nav_3();
+    nav_4.nav_4();
+    nav_tab.nav_tab();
+    sidebar_1.sidebar_1();
+    sidebar_2.sidebar_2();
+    sidebar_3.sidebar_3();
+    sidebar_4.sidebar_4();
+    sidebar_5.sidebar_5();
+    sidebar_6.sidebar_6();
+    sidebar_7.sidebar_7();
+    sidebar_8.sidebar_8();
+    sidebar_tab.sidebar_tab();
+    module_slide_1.module_slide_1();
+    module_slide_2.module_slide_2();
+
 })

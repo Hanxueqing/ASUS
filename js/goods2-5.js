@@ -1,5 +1,5 @@
 define(['parabola','jquery','jquery-cookie'],function(parabola,$){
-    function goods_1_3(){
+    function goods_2_5(){
         $(function(){
             //通过ajax加载数据
 			$.ajax({
@@ -7,7 +7,7 @@ define(['parabola','jquery','jquery-cookie'],function(parabola,$){
 				// dataType: "json", 自动识别
 				success: function(arr){
 					//通过循环，创建节点添加到页面上
-					for(var i = 6; i < 12; i++){
+					for(var i = 12; i < 18; i++){
 						var node = $(`<!-- 单个商品 -->
                         <div class = "hs-index-s1-goods-item">
                             <!-- 图片区 -->
@@ -29,7 +29,7 @@ define(['parabola','jquery','jquery-cookie'],function(parabola,$){
                                 <span class = "market_price" style = "color:#6f6f6f;margin-left:10px;font-size:12px;text-decoration:line-through;">${arr[i].preprice}</span>
                             </div>
                         </div>`);
-					node.appendTo(".goods_1_3");
+					node.appendTo(".goods_2_5");
 						
 					}
 
@@ -41,6 +41,6 @@ define(['parabola','jquery','jquery-cookie'],function(parabola,$){
         })
     }
     return{
-        goods_1_3:goods_1_3
+        goods_2_5:goods_2_5
     }
 })

@@ -1,5 +1,5 @@
 define(['jquery'],function($){
-    function tab(){
+    function tab_1(){
         $(function(){
             $(".tab_head_1").on("mouseover","li",function(){
                 $(this).addClass("tab_head_active");
@@ -16,6 +16,6 @@ define(['jquery'],function($){
         })
     }
     return{
-        tab:tab
+        tab_1:tab_1
     }
 })

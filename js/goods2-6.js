@@ -1,5 +1,5 @@
 define(['parabola','jquery','jquery-cookie'],function(parabola,$){
-    function goods_1_4(){
+    function goods_2_6(){
         $(function(){
             //通过ajax加载数据
 			$.ajax({
@@ -48,7 +48,7 @@ define(['parabola','jquery','jquery-cookie'],function(parabola,$){
                     </li>`);
                         }
 						
-					node.appendTo(".right_list_1");
+					node.appendTo(".right_list_2");
 						
 					}
 
@@ -60,6 +60,6 @@ define(['parabola','jquery','jquery-cookie'],function(parabola,$){
         })
     }
     return{
-        goods_1_4:goods_1_4
+        goods_2_6:goods_2_6
     }
 })

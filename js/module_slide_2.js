@@ -1,17 +1,19 @@
 define(['jquery'],function($){
-    function slide(){
+    function module_slide_2(){
         $(function(){
             $("a").click(function(){
                 return false;
             })
-            var aBtns = $('.play').find("ol").find("li");
-            var oUl = $(".play").find("ul");
-            var aLis = oUl.find("li");
+            var aBtns = $('.tab_body_2').find("ol").find("li");
+            //var oUl = $(".module-slide").find("ul");
+            //var aLis = oUl.find(".slide-item");
+            var oUl = $(".tab_body_2").find(".module-slide").find("ul");
+            var aLis = $(".tab_body_2").find(".slide-item");
             //alert(aLis.length);
 
             oUl.innerHTML += oUl.innerHTML;
             //oUl.style.width = 1920 * aLis.length + "px";
-            oUl.css("width",1920 * aLis.length);
+            oUl.css("width",777 * aLis.length);
 
             var iNow = 0;//设置当前显示的图片的下标
             /* aBtns.attr("class","").eq(0).attr("class","active"); */
@@ -34,7 +36,7 @@ define(['jquery'],function($){
                 iNow++;
                 tab();
                 if(iNow > aLis.size()){
-                    iNow = aLis.size() - 1
+                    iNow = aLis.size() - 1;
                 }
             })
 
@@ -47,10 +49,10 @@ define(['jquery'],function($){
             },2000);
 
             //给整个banner图,添加移入移出
-            $("#play").mouseenter(function(){
+            $("#module-slide").mouseenter(function(){
                 clearInterval(timer);
             })
-            $("#play").mouseleave(function(){
+            $("#module-slide").mouseleave(function(){
                 timer = setInterval(function(){
                     iNow++;
                     tab();
@@ -58,15 +60,16 @@ define(['jquery'],function($){
             })
             
             function tab(){
+                //alert(aLis.size());
                 aBtns.attr("class","").eq(iNow).attr("class","active");
                 if(iNow == aLis.size() - 1){
                     aBtns.eq(0).attr("class","active");
                 }
                 oUl.stop().animate({
-                    left:-1920 * iNow
+                    left:-777 * iNow
                 },500,function(){
                     //动画结束的时候,如果是最后一张图片
-                    if(iNow == aLis.size() - 1){
+                    if(iNow == aLis.size()){
                         oUl.css("left",0);
                         iNow = 0;
                     } 
@@ -76,6 +79,6 @@ define(['jquery'],function($){
     }
 
     return{
-        slide:slide,
+        module_slide_2:module_slide_2,
     }
 })

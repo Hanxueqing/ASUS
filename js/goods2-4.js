@@ -1,5 +1,5 @@
 define(['parabola','jquery','jquery-cookie'],function(parabola,$){
-    function goods_1_3(){
+    function goods_2_4(){
         $(function(){
             //通过ajax加载数据
 			$.ajax({
@@ -29,7 +29,7 @@ define(['parabola','jquery','jquery-cookie'],function(parabola,$){
                                 <span class = "market_price" style = "color:#6f6f6f;margin-left:10px;font-size:12px;text-decoration:line-through;">${arr[i].preprice}</span>
                             </div>
                         </div>`);
-					node.appendTo(".goods_1_3");
+					node.appendTo(".goods_2_4");
 						
 					}
 
@@ -41,6 +41,6 @@ define(['parabola','jquery','jquery-cookie'],function(parabola,$){
         })
     }
     return{
-        goods_1_3:goods_1_3
+        goods_2_4:goods_2_4
     }
 })
