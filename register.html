@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "css/reset.css">
+    <link rel = "stylesheet" href = "css/register.css">
+    <script src = "js/require.js" defer async = "true" data-main = "js/rg_main"></script>
+</head>
+<body>
+    <div id = "container" class = "page-container">
+        <div class  ="signup-article">
+            <div id = "page_signup" class = "signupin-content signup">
+                <div class = "sign-title">
+                    <h2>注册华硕会员账号</h2>
+                </div>
+                <form method = "post">
+                    <ul class  = "mobile_signup">
+                        <li class = "form-item">
+                            <span class  ="form-act">
+                                <input id = "mobile" class = "x-input" type = "text" name = "mobile" placeholder = "请输入11位手机号" style = "border:1px solid #ccc;width:250px;"></input>
+                            </span>
+                        </li>
+                        <li class = "form-item">
+                            <span class  ="form-act">
+                                <input class = "x-input" type = "text" name = "vcode" placeholder = "请输入验证码" style = "width:100px;border:1px solid #ccc;"></input>
+                                <button id = "send_msg" class = "layui-btn layui-btn-normal" style = "float: right;">获取短信验证码</button>
+                            </span>
+                        </li>
+                        <li class = "form-item-normal">
+                            <span class = "form-act">
+                                <button id = "register_post" class = "btn-big">
+                                    <span>
+                                        <span>注　册</span>
+                                    </span>
+                                </button>
+                            </span>
+                        </li>
+                        <li class = "form-item action-agree">
+                            <span class = "form-act">
+                                <input id = "license" type = "checkbox" name = "license">
+                                <label class = "form-sub-label">
+                                    <span>我已阅读并同意</span>
+                                    <a class = "lnklike"> ASUS使用条款</a>和<a class = "lnklike"><span>隐私政策</span></a>
+                                </label>
+                            </span>
+                        </li>
+                    </ul>
+                </form>
+                <a class = "go_sigin">已有账号，登录</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

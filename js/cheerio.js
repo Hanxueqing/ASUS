@@ -37,8 +37,8 @@ function filterMenu(html){
     // $(".mainNavs .menu_box h2").each(function(item){
     //     arr.push($(item).html());
     // })
-    $(".cata-img").each(function(index,item){
-        arr.push($(item).find("img").attr("src"));
+    $(".node-index").each(function(index,item){
+        arr.push($(item).find("a").text().trim());
     })
     return arr;
 }

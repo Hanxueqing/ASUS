@@ -146,4 +146,32 @@
 		"description":"超窄边框   八代标压",
 		"price":"￥7699",
 		"preprice":"￥8899",
-		"img":"https://static.asus.com.cn/store/20180918/15071955100491.jpg"}]
+		"img":"https://static.asus.com.cn/store/20180918/15071955100491.jpg"},
+	{
+		"id":21,
+		"title":"ROG PNK Baby 甜心限定系列键盘",
+		"description":"粉色来袭 萌翻全场",
+		"price":"￥ 1314",
+		"preprice":"￥1999",
+		"img":"https://static.asus.com.cn/store/album/images/LRIK4ZDKN61YXV/20293097504897.jpg"},
+	{
+		"id":22,
+		"title":"adol（a豆）智能台灯",
+		"description":"无线充电 国A级照度",
+		"price":"￥ 229",
+		"preprice":"￥299",
+		"img":"https://static.asus.com.cn/store/album/images/RKHCTL2QT2VHTO/16153656974948.jpg"},
+	{
+		"id":23,
+		"title":"ROG Delta电竞耳机",
+		"description":"RW战队指定电竞游戏装备",
+		"price":"￥ 1399",
+		"preprice":"￥1999",
+		"img":"https://static.asus.com.cn/store/album/images/N7E413XXYIZYZC/17244949511004.jpg"},
+	{
+		"id":24,
+		"title":"三年延保+三年意外险",
+		"description":"",
+		"price":"￥ 798",
+		"preprice":"￥798",
+		"img":"https://static.asus.com.cn/store/20181112/16533410152995.jpg"}]

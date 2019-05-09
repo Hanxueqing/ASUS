@@ -1,0 +1,166 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: Microsoft Yahei, "微软雅黑", Tahoma, Arial, Helvetica, STHeiti !important;
+  color: #666666;
+  background-color: #f2f2f2;
+  line-height: 24px; }
+
+.page {
+  width: 1226px;
+  margin: 0 auto; }
+
+#container {
+  position: relative; }
+  #container a {
+    cursor: pointer; }
+  #container .header-main {
+    padding-top: 23px;
+    background-color: #fff;
+    position: relative; }
+    #container .header-main .page {
+      height: 77px;
+      overflow: hidden; }
+  #container .passport_box {
+    background-color: #e34c6c;
+    min-height: 655px; }
+    #container .passport_box .login_bg_box {
+      height: 465px; }
+    #container .passport_box .signin-page-wrap {
+      width: 380px;
+      height: 498px;
+      min-height: 435px;
+      position: absolute;
+      top: 175px;
+      left: 50%;
+      margin-left: 230px;
+      padding: 15px;
+      background: #fff;
+      overflow: hidden; }
+      #container .passport_box .signin-page-wrap .signupin-content a {
+        margin-left: 3px;
+        margin-right: 3px; }
+      #container .passport_box .signin-page-wrap .signupin-content .js-verificode {
+        position: absolute;
+        top: 4px;
+        right: 3px;
+        padding: 9px 0;
+        border-left: 1px solid #ccc;
+        width: 120px;
+        text-align: center;
+        font-size: 14px; }
+      #container .passport_box .signin-page-wrap .signin {
+        border: none;
+        width: 350px;
+        padding: 0 15px;
+        margin: 0; }
+        #container .passport_box .signin-page-wrap .signin .sign-title {
+          font-size: 24px;
+          padding: 0;
+          border-bottom: none;
+          margin-top: 30px;
+          margin-bottom: 30px;
+          height: 44px; }
+          #container .passport_box .signin-page-wrap .signin .sign-title .active {
+            color: #00a8ff; }
+          #container .passport_box .signin-page-wrap .signin .sign-title a {
+            font-size: 24px;
+            color: #8a8a8a; }
+          #container .passport_box .signin-page-wrap .signin .sign-title i {
+            display: inline-block;
+            width: 2px;
+            height: 20px;
+            background-color: #ccc; }
+        #container .passport_box .signin-page-wrap .signin form {
+          position: relative; }
+          #container .passport_box .signin-page-wrap .signin form .form-item {
+            height: 50px;
+            font-size: 116.66667%; }
+          #container .passport_box .signin-page-wrap .signin form .mb-20 {
+            margin-bottom: 20px; }
+            #container .passport_box .signin-page-wrap .signin form .mb-20 .form-act {
+              margin-left: 0;
+              position: relative;
+              display: block; }
+              #container .passport_box .signin-page-wrap .signin form .mb-20 .form-act .x-input {
+                text-indent: 12px;
+                padding-right: 0;
+                height: 46px;
+                line-height: 46px;
+                font-size: 14px;
+                width: 334px;
+                color: #262626;
+                padding: 1px 4px;
+                border: 1px solid #ccc; }
+              #container .passport_box .signin-page-wrap .signin form .mb-20 .form-act .btn-big {
+                width: 350px;
+                height: 50px;
+                line-height: 50px;
+                padding: 0;
+                background: #00a8ff;
+                display: block;
+                cursor: pointer;
+                font-size: 14px;
+                border: none;
+                color: #fff; }
+          #container .passport_box .signin-page-wrap .signin form .more_link {
+            font-size: 0;
+            height: 16px;
+            line-height: 16px; }
+            #container .passport_box .signin-page-wrap .signin form .more_link a {
+              color: #666666;
+              padding: 0 5px;
+              font-size: 14px;
+              margin: 0; }
+            #container .passport_box .signin-page-wrap .signin form .more_link span {
+              float: right; }
+              #container .passport_box .signin-page-wrap .signin form .more_link span a {
+                padding: 0px 5px; }
+            #container .passport_box .signin-page-wrap .signin form .more_link .link_signup {
+              border-right: 1px solid #666; }
+          #container .passport_box .signin-page-wrap .signin form .action-msg {
+            height: 30px;
+            font-size: 14px;
+            display: none; }
+            #container .passport_box .signin-page-wrap .signin form .action-msg span:nth-child(1) {
+              display: inline-block;
+              height: 16px;
+              width: 16px;
+              border-radius: 50%;
+              background: #00a8ff;
+              text-align: center;
+              line-height: 14px;
+              color: #fff; }
+            #container .passport_box .signin-page-wrap .signin form .action-msg span:nth-child(2) {
+              color: #00a8ff;
+              font-weight: bold; }
+      #container .passport_box .signin-page-wrap .third-login {
+        text-align: center;
+        border-top: 1px solid #ccc;
+        position: relative;
+        overflow: visible;
+        margin-top: 55px; }
+        #container .passport_box .signin-page-wrap .third-login .third-login_text {
+          position: absolute;
+          display: inline-block;
+          left: 70px;
+          width: 210px;
+          top: -24px;
+          background-color: #fff;
+          font-size: 14px; }
+          #container .passport_box .signin-page-wrap .third-login .third-login_text span {
+            display: inline-block;
+            width: 210px;
+            margin-top: 0; }
+            #container .passport_box .signin-page-wrap .third-login .third-login_text span a {
+              color: #00a8ff; }
+              #container .passport_box .signin-page-wrap .third-login .third-login_text span a img {
+                margin-top: 0; }
+        #container .passport_box .signin-page-wrap .third-login .third-login_icon {
+          display: inline-block;
+          margin: 0 auto;
+          margin-top: 15px;
+          text-align: center; }
