@@ -23,6 +23,9 @@ define(['parabola','jquery','jquery-cookie'],function(parabola,$){
                                 <p style = "text-align:center;">
                                     <span class = "market_price" style = "color:#6f6f6f;font-size:12px;text-decoration:line-through;">${arr[i].preprice}</span>
                                 </p>
+                                <div class="sc">
+                                    <div id = '${arr[i].id}' class="action-addtocart">加入购物车</div>
+                                </div>
                             </a>
                         </div>
                     </li>`);

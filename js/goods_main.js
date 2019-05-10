@@ -5,6 +5,9 @@ require.config({
         jquery:"jquery-1.11.3",
         "jquery-cookie":"jquery.cookie",
         parabola:"parabola",
+        "goods4-1":"goods4-1",
+        "footer":"footer",
+        "magnifier":"magnifier",
         
     },
     shim:{
@@ -14,7 +17,8 @@ require.config({
         }
     }
 })
-require(["slide"],function(slide){
-    slide.slide();
-
+require(["goods4-1","footer","magnifier"],function(goods_4_1,footer,magnifier){
+    goods_4_1.goods_4_1();
+    footer.footer();
+    magnifier.magnifier();
 })

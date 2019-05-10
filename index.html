@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel = "stylesheet" href = "css/index.css">
     <link rel = "stylesheet" href = "css/reset.css">
-    <link rel = "stylesheet" href = "css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
     <script src = "js/require.js" defer async = "true" data-main = "js/main"></script>
 </head>
 <body>
@@ -48,6 +48,55 @@
                                         <b class = "op-cart-number">0</b>
                                         <span>)</span>
                                     </a>
+                                    <!-- 新增购物车 -->
+                                    <div class="minicart-cont">    
+                                        <ul class="minicart-list clearfix">
+                                            <!-- <li class="goods-item">
+                                                <div class="goods-pic">
+                                                    <a href="">
+                                                        <img src="//static.asus.com.cn/store/album/images/SI51TA5N6QULIB/20544351559750.jpg">
+                                                    </a>
+                                                </div>
+                                                <div class="goods-info">
+                                                    <h3 class="goods-name">
+                                                        <a href="" target="_blank">灵耀Deluxe 14 数字键盘板<br>
+                                                            <span style = "font-size:12px;color:#666;">92%全面屏 A4纸大小</span>
+                                                        </a>
+                                                        
+                                                    </h3>
+                                                    
+                                                    <div class="goods-price">
+                                                        <p style = "color:red;">
+                                                            × 
+                                                            <span class="p-quantity" style = "color:red;">1</span>
+                                                        </p>
+                                                        
+                                                    </div>
+                                                    <a class="action-delete">
+                                                        <i class="iconfont" style = "font-size:24px;float:right;margin-right:20px;cursor:pointer;">&#xe617;</i>
+                                                    </a>
+                                                    
+                                                </div>
+                                                <div class = "edit_btn edit_btn_a">+</div>
+                                                <div class = "edit_btn edit_btn_m">-</div>
+                                            </li>                 -->
+                                        </ul>
+                                        <div class="minicart-info">
+                                            <div class="fl">
+                                                <p>
+                                                    共 <i id="total_num">1</i>
+                                                    件商品 </p>
+                                                <p>
+                                                    <span class="price">￥7999</span>
+                                                </p>
+                                            </div>
+                                            <div class="fr">
+                                                <p>
+                                                    <a id="topay" style="cursor:pointer;" class="btn-tocart">去结算</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -303,7 +352,9 @@
             </div>
         </div>
         <div class = "hot_sale pos-rel borderRight">
+            <div id = 'ball'></div>
             <ul class = "clearfix goodList hotgoodList" style = "width:3920px;">
+
             </ul>
         </div>
     </div>

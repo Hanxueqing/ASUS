@@ -65,6 +65,7 @@ a {
 .header .login-bar li {
   float: left;
   padding: 0 10px;
+  margin-left: 10px;
   height: 40px;
   line-height: 40px; }
 
@@ -74,16 +75,24 @@ a {
 
 .minicart {
   line-height: 40px;
-  position: relative;
   z-index: 3;
   min-width: 120px;
   background-color: #4c4c4c; }
+  .minicart .btn-tocart {
+    color: #fff;
+    width: 110px;
+    line-height: 32px;
+    display: block;
+    text-align: center;
+    background-color: #00a8ff;
+    margin-top: 6px; }
 
 .header .login-bar li .minicart-text {
   height: 40px; }
 
 .minicart .minicart-text {
-  padding-left: 35px; }
+  padding-left: 35px;
+  position: relative; }
 
 .minicart-text .active .cart_icon {
   background-position: 0 -27px; }
@@ -99,6 +108,101 @@ a {
   background: url(../images/cart_icon.png) no-repeat;
   left: 6px;
   top: 7px; }
+
+.minicart-cont {
+  min-width: 303px;
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  top: 40px;
+  z-index: 9998;
+  text-align: left;
+  line-height: 18px;
+  background-color: #fff;
+  box-shadow: 0 2px 3px #ccc;
+  padding-top: 10px; }
+  .minicart-cont ul {
+    max-height: 240px;
+    overflow-y: auto;
+    overflow-x: hidden; }
+  .minicart-cont .minicart-list .goods-item {
+    height: 85px;
+    border-bottom: 1px solid #a0a0a0;
+    padding: 10px 0;
+    width: 280px;
+    clear: both; }
+  .minicart-cont .minicart-list li:last-child {
+    border: none; }
+  .minicart-cont .goods-pic {
+    width: 60px;
+    height: 60px;
+    line-height: 58px;
+    *line-height: 60px;
+    overflow: hidden;
+    text-align: center;
+    *font-size: 54px;
+    font-family: Arial;
+    float: left; }
+    .minicart-cont .goods-pic img {
+      max-width: 60px;
+      max-height: 60px;
+      vertical-align: middle; }
+  .minicart-cont .goods-info {
+    width: 220px;
+    float: left; }
+  .minicart-cont .goods-name {
+    width: 132px;
+    line-height: 16px;
+    float: left;
+    margin-left: 10px; }
+    .minicart-cont .goods-name a {
+      color: #262626;
+      line-height: 16px; }
+  .minicart-cont .edit_btn_a {
+    margin-left: 110px; }
+  .minicart-cont .edit_btn {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #00a8ff;
+    border-radius: 5px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 16px;
+    float: left;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px; }
+  .minicart-cont .goods-price {
+    overflow: hidden;
+    float: left;
+    line-height: 16px; }
+    .minicart-cont .goods-price p {
+      color: #262626; }
+      .minicart-cont .goods-price p .p-quantity {
+        color: #626262;
+        display: inline;
+        margin-right: 0; }
+      .minicart-cont .goods-price p .icon-recycle {
+        font-size: 14px;
+        color: #c8c8c8; }
+
+.minicart-info {
+  background-color: #e5e5e5;
+  padding: 10px 14px 10px 10px;
+  min-height: 40px;
+  color: #262626;
+  line-height: 16px; }
+  .minicart-info .fl {
+    float: left; }
+  .minicart-info .fr {
+    float: right; }
+  .minicart-info .price {
+    color: red;
+    font-size: 24px;
+    line-height: 30px;
+    margin-left: -4px; }
+  .minicart-info .btn-tocart {
+    color: #fff; }
 
 .header-main {
   padding-top: 23px;
@@ -496,17 +600,25 @@ button .btn {
   position: relative; }
 
 .hot_sale {
-  height: 400px;
+  height: 500px;
   overflow: hidden;
   margin-bottom: 28px;
   border-right: 1px solid #ccc; }
+  .hot_sale #ball {
+    width: 20px;
+    height: 20px;
+    background: #00a8ff;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 50;
+    display: none; }
   .hot_sale ul {
     margin-left: 1px;
     position: absolute; }
   .hot_sale li {
     float: left;
     width: 244px;
-    height: 398px;
+    height: 470px;
     border: 1px solid #cccccc;
     border-right: none;
     position: relative; }
@@ -538,6 +650,17 @@ button .btn {
         height: 22px;
         overflow: hidden;
         text-align: center; }
+      .hot_sale li .hot_sale_name .action-addtocart {
+        height: 38px;
+        line-height: 38px;
+        font-size: 18px;
+        border: 1px solid #00a8ff;
+        background: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        color: #00a8ff;
+        margin-top: 20px;
+        font-size: 16px; }
     .hot_sale li .hot_sale_price {
       font-size: 16px;
       color: #fc0100;
@@ -769,6 +892,11 @@ button .btn {
             line-height: 40px;
             margin-bottom: 9px;
             overflow: hidden; }
+            .m_right_top .sales-charts .bd .goods-list .goods-item .goods-info .action-delete {
+              margin-right: 20px;
+              float: right; }
+              .m_right_top .sales-charts .bd .goods-list .goods-item .goods-info .action-delete i {
+                font-size: 20px; }
             .m_right_top .sales-charts .bd .goods-list .goods-item .goods-info .goods-name {
               height: 32px;
               overflow: hidden;
@@ -782,6 +910,10 @@ button .btn {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 font-weight: 400; }
+                .m_right_top .sales-charts .bd .goods-list .goods-item .goods-info .goods-name a .content_text {
+                  font-size: 14px;
+                  font-weight: normal;
+                  color: #ccc; }
             .m_right_top .sales-charts .bd .goods-list .goods-item .goods-info .goods-price {
               display: block;
               margin-top: 8px;
