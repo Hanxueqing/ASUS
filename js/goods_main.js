@@ -8,6 +8,8 @@ require.config({
         "goods4-1":"goods4-1",
         "footer":"footer",
         "magnifier":"magnifier",
+        //页面跳转
+        "openNewHtml":"openNewHtml",
         
     },
     shim:{
@@ -17,8 +19,9 @@ require.config({
         }
     }
 })
-require(["goods4-1","footer","magnifier"],function(goods_4_1,footer,magnifier){
+require(["goods4-1","footer","magnifier","openNewHtml"],function(goods_4_1,footer,magnifier,openNewHtml){
     goods_4_1.goods_4_1();
     footer.footer();
     magnifier.magnifier();
+    openNewHtml.openNewHtml();
 })

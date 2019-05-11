@@ -5,6 +5,10 @@ require.config({
         jquery:"jquery-1.11.3",
         "jquery-cookie":"jquery.cookie",
         parabola:"parabola",
+        "register":"register",
+        "ajax":"ajax",
+        //页面跳转
+        "openNewHtml":"openNewHtml",
         
     },
     shim:{
@@ -14,7 +18,8 @@ require.config({
         }
     }
 })
-require(["slide"],function(slide){
-    slide.slide();
-
+require(["register","ajax","openNewHtml"],function(register,ajax,openNewHtml){
+    register.register();
+    ajax.ajax();
+    openNewHtml.openNewHtml();
 })

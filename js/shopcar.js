@@ -2,6 +2,7 @@ define(["parabola", "jquery", "jquery-cookie"], function(parabola, $){
 	function shopcar(){
 		$(function(){
 			sc_msg();
+			sc_price();
             //显示购物车数量
             $(".op-cart-number").html(sc_num());
             //给加入购物车按钮添加点击事件，后添加的节点拥有事件
@@ -102,7 +103,7 @@ define(["parabola", "jquery", "jquery-cookie"], function(parabola, $){
                                 </div>
                                 <div class = "edit_btn edit_btn_a" id = ${goodsArr[i].id}>+</div>
                                 <div class = "edit_btn edit_btn_m" id = ${goodsArr[i].id}>-</div>
-                            </li`);
+                            </li>`);
 								node.appendTo(".minicart-list");
 							}
 						}
@@ -111,7 +112,41 @@ define(["parabola", "jquery", "jquery-cookie"], function(parabola, $){
 						alert(msg);
 					}
 				})
-            }
+			}
+			//计算商品总价
+			function sc_price(){
+				$.ajax({
+					url: "../data/tab.json",
+					success: function(arr){
+						//arr 全部商品的数据
+						var cookieStr = $.cookie("goods");
+						if(cookieStr){
+							var cookieArr = JSON.parse(cookieStr);
+							var goodsArr = [];
+							//将存储在cookie中的数据单独拿出来
+							for(var i = 0; i < arr.length; i++){
+								for(var j = 0; j < cookieArr.length; j++){
+									if(arr[i].id == cookieArr[j].id){
+										arr[i].num = cookieArr[j].num;
+										goodsArr.push(arr[i]);
+									}
+								}
+							}
+							//拿到加载cookie中完整的商品数据以后，直接在页面上加载数据
+							var sum_price = 0;
+							for(var i = 0; i < goodsArr.length; i++){
+								var every_price = parseInt(goodsArr[i].price.slice(1,goodsArr[i].price.length));
+								sum_price += every_price;
+							}
+							$(".price").html(sum_price);
+						}
+					},
+					error: function(msg){
+						alert(msg);
+					}
+				})
+				//return sum_price;
+			}
             //用于做抛物线运动的函数，需要当前点击这个按钮
 			function ballMove(node){
 				//1、将小球移动到这个位置，并且显示出来
@@ -166,12 +201,14 @@ define(["parabola", "jquery", "jquery-cookie"], function(parabola, $){
                 
 				//3、重新计算数量
                 $(".op-cart-number").html(sc_num());
-                sc_num()
+				sc_num();
+				sc_price();
 				return false;
             })
 
             //通过事件委托，给+和-按钮添加点击事件
 			$(".minicart-list").on("click", ".edit_btn", function(){
+				sc_price();
                 var id = this.parentNode.id;
                 //alert(id);  
 				//1、取出要操作的cookie中的数据
@@ -184,6 +221,7 @@ define(["parabola", "jquery", "jquery-cookie"], function(parabola, $){
 							//改变页面的数量
 							//alert(cookieArr[i].num);
 							$(this).prevAll(".goods-info").find(".p-quantity").html(cookieArr[i].num);
+							sc_price();
 						}else{
 							//-
 							if(cookieArr[i].num == 1){
@@ -191,11 +229,14 @@ define(["parabola", "jquery", "jquery-cookie"], function(parabola, $){
 							}else{
 								cookieArr[i].num--;
 								$(this).prevAll(".goods-info").find(".p-quantity").html(cookieArr[i].num);
+								sc_price();
 							}
 
 						}
+						
 						break;
 					}
+					
 				}
 
 				//重新存储到cookie中
@@ -205,6 +246,7 @@ define(["parabola", "jquery", "jquery-cookie"], function(parabola, $){
 
 				//更新商品数量
 				$(".op-cart-number").html(sc_num());
+				sc_price();
 				
             })
             

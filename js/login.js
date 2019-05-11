@@ -5,6 +5,7 @@ define(['jquery'],function($){
                 return false;
             })
             $(".js-phone").on("click",function(){
+                //alert(1);
                 $(".js-phone").addClass("active");
                 $(".js-account").removeClass("active");
                 $(".js-phone_input").css("display","block");

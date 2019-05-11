@@ -6,6 +6,10 @@ require.config({
         "jquery-cookie":"jquery.cookie",
         parabola:"parabola",
         "login":"login",
+        "r_login":"r_login",
+        "ajax":"ajax",
+        //页面跳转
+        "openNewHtml":"openNewHtml",
         
     },
     shim:{
@@ -15,7 +19,9 @@ require.config({
         }
     }
 })
-require(["login"],function(login){
+require(["login","r_login","ajax","openNewHtml"],function(login,r_login,ajax,openNewHtml){
     login.login();
-
+    r_login.r_login();
+    ajax.ajax();
+    openNewHtml.openNewHtml();
 })
