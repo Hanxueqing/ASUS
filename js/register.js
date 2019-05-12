@@ -1,4 +1,4 @@
-define(['jquery'],function($){
+define(['jquery','ajax'],function($,ajax){
     function register(){
         var oRegisterBtn = document.getElementById("register_post");
         var oRegbox = document.getElementsByClassName("mobile_signup")[0];
@@ -16,15 +16,16 @@ define(['jquery'],function($){
                 oAlert.style.display = "block";
                 oAlert.innerHTML = "请输入确认密码";
             }else{
-                ajax({
+                ajax.ajax({
                     method:"post",
-                    url:"js/register.php",
+                    url:"../js/register.php",
                     data: queryString(aInputs),
                     success:function(data){
                         var obj = JSON.parse(data);
                         if(!obj.code){
                             oAlert.style.display = "block";
                             oAlert.innerHTML = obj.message;
+                            window.location.href="login.html"; 
                         }else{
                             oAlert.style.display = "block";
                             oAlert.innerHTML = obj.message;

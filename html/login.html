@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "../css/reset.css">
+    <link rel = "stylesheet" href = "../css/login.css">
+    <script src = "../js/require.js" defer async = "true" data-main = "../js/login_main"></script>
+</head>
+<body>
+    <div id = "container" class = "page-container">
+        <div class = "header">
+            <div class = "header-main">
+                <div class = "page">
+                    <div class = "logo">
+                        <a class = "logoHtml">
+                            <img class = "logoHtml" src = "https://static.asus.com.cn/store/20180911/14375551535398.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "passport_box">
+            <div class = "login_bg_box" style = "padding-top:75px;width:1200px;margin:0 auto;">
+                <img src = "https://static.quyibao.com/b2c/image/20180720/13394650505148.jpg">
+            </div>
+            <div class = "signin-page-wrap">
+                <div id = "page_signin" class = "signupin-content signin">
+                    <div class = "sign-title">
+                        <p class = "sign-title-text" style = "text-align:center;">
+                            <a class = "js-phone active" style = "padding-right:20px;">验证码登录</a>
+                            <i></i>
+                            <a class = "js-account" style = "padding-left:20px;">账号登录</a>
+                        </p>
+                    </div>
+                    <ul id = "login">
+                        <!-- 账号登录 -->
+                        <li class = "form-item js-account_input mb-20" style = "display:none;">
+                            <span class = "form-act">
+                                <input class = "x-input" type = "text" name = "user_name" placeholder = "用户名/邮箱地址/手机号">
+                            </span>
+                        </li>
+                        <li class = "form-item js-account_input mb-20" style = "display:none;">
+                            <span class = "form-act">
+                                <input class = "x-input" type = "password" name = "user_password" placeholder = "填写密码">
+                            </span>
+                        </li>
+
+                        <!-- 验证码登录 -->
+                        <li class = "form-item js-phone_input mb-20" style = "display:list-item;">
+                            <span class = "form-act">
+                                <input class = "x-input" type = "text" name = "user_phone" placeholder = "手机号">
+                            </span>
+                        </li>
+                        <li class = "form-item js-phone_input mb-20" style = "display:list-item;">
+                            <span class = "form-act">
+                                <input class = "x-input" type = "text" name = "user_phoneCode" placeholder = "短信验证码">
+                                <a class = "btn-verificode js-verificode" sytle = "pointer-events:auto">获取验证码</a>
+                            </span>
+                        </li>
+                        <!-- 警告信息 -->
+                        <div class = "action-message">
+                            <!-- 手机号为空 -->
+                            <li class = "form-item action-msg msg-phone">
+                                <div class = "notice-inline" style = "top:150px;">
+                                    <span class = "icon">!</span>
+                                    <span class = "">请填写手机号</span>
+                                </div>
+                            </li>
+                            <!-- 短信验证码为空 -->
+                            <li class = "form-item action-msg msg-phoneCode">
+                                <div class = "notice-inline" style = "top:150px;">
+                                    <span class = "icon">!</span>
+                                    <span class = "">请填写短信验证码</span>
+                                </div>
+                            </li>
+                            <!-- 登录账号为空 -->
+                            <li class = "form-item action-msg msg-name">
+                                <div class = "notice-inline" style = "top:150px;">
+                                    <span class = "icon">!</span>
+                                    <span class = "">请填写登录账号</span>
+                                </div>
+                            </li>
+                            <!-- 密码为空 -->
+                            <li class = "form-item action-msg msg-password">
+                                <div class = "notice-inline" style = "top:150px;">
+                                    <span class = "icon">!</span>
+                                    <span class = "">请填写密码</span>
+                                </div>
+                            </li>
+                            <!-- 用户名未注册 -->
+                            <li class = "form-item action-msg">
+                                <div class = "notice-inline" style = "top:150px;">
+                                    <span class = "icon">!</span>
+                                    <span class = "">用户名未注册，请用动态码登录</span>
+                                </div>
+                            </li>
+                            <!-- 用户名或密码错误 -->
+                            <li class = "form-item action-msg" id = "alert">
+                                <div class = "notice-inline" style = "top:150px;">
+                                    <span class = "icon">!</span>
+                                    <span class = "">用户名或密码错误</span>
+                                </div>
+                            </li>
+                            
+                            
+                            
+                            
+                        </div>
+                        
+
+                        <!-- 验证码立即登录 -->
+                        <li class = "form-item mb-20 form-phone" style = "margin-bottom:10px;display:list-item;">
+                            <span class = "form-act">
+                                <button class = "btn btn-major btn-big button-phone">
+                                    <span>
+                                        <span style = "filter:none">验证码立即登录</span>
+                                    </span>
+                                </button>
+                            </span>
+                        </li>
+                        <!-- 账号立即登录 -->
+                        <li class = "form-item mb-20 form-account" style = "margin-bottom:10px;display:none;">
+                            <span class = "form-act">
+                                <button class = "btn btn-major btn-big button-account" id = "loginBtn">
+                                    <span>
+                                        <span style = "filter:none">账号立即登录</span>
+                                    </span>
+                                </button>
+                            </span>
+                        </li>
+
+                        <li class = "form-item mb-20 more_link" style = "text-align:right">
+                            <a style = "padding:0;float:left;">企业用户注册</a>
+                            <span>
+                                <a class = "link_signup" style = "float:left;">注册ASUS会员账号</a>
+                                <a style = "float:left;">忘记密码？</a>
+                            </span>
+                            
+                        </li>
+                        
+                        
+                        <li class = "form-item third-login">
+                            <!-- 验证码登录——文字区 -->
+                            <div class = "third-login_text third-login_account" style = "top:-11px;display:none;">
+                                <span>其他方式登录</span>
+                            </div>
+
+                            <!-- 账号登录——文字区 -->
+                            <div class = "third-login_text third-login_phone">
+                                <span>您可以使用社交账号</span>
+                                <span>直接登录<a>华硕会员</a>，无需注册</span>
+                            </div>
+
+                            <span class = "third-login_icon">
+                                <a class = "js-weixin">
+                                    <img src = "https://static.asus.com.cn/static/store/images/weixin.png">
+                                </a>
+                            </span>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
