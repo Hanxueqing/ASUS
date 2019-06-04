@@ -74,9 +74,8 @@ define(["parabola", "jquery", "jquery-cookie"], function(parabola, $){
 								
 								var every_price = parseInt(goodsArr[i].price.slice(1,goodsArr[i].price.length));
 								sum_price += every_price;
-								//$(".sum_price").html(sum_price);
-								//alert(every_price);
-								//alert(typeof every_price);
+								$(".sum_price").html(sum_price);
+								
 							}
 							$(".sum_price").html(sum_price)
 						}
@@ -135,7 +134,6 @@ define(["parabola", "jquery", "jquery-cookie"], function(parabola, $){
 							//改变页面的数量
 							//alert(cookieArr[i].num);
 							$(this).siblings("input").val(cookieArr[i].num);
-							sc_price();
 						}else{
 							//-
 							if(cookieArr[i].num == 1){
@@ -143,7 +141,7 @@ define(["parabola", "jquery", "jquery-cookie"], function(parabola, $){
 							}else{
 								cookieArr[i].num--;
 								$(this).siblings("input").val(cookieArr[i].num);
-								sc_price();
+								// sc_price();
 							}
 
 						}
@@ -155,7 +153,7 @@ define(["parabola", "jquery", "jquery-cookie"], function(parabola, $){
 				$.cookie("goods", JSON.stringify(cookieArr), {
 					expires: 7
 				})
-
+				sc_price();
 				//更新商品数量
 				$(".allNum").html(sc_num());
 				
@@ -198,10 +196,11 @@ define(["parabola", "jquery", "jquery-cookie"], function(parabola, $){
 										//拿到加载cookie中完整的商品数据以后，直接在页面上加载数据
 										var sum_price = 0;
 										for(var i = 0; i < goodsArr.length; i++){
-											var every_price = parseInt(goodsArr[i].price.slice(1,goodsArr[i].price.length));
+											var every_price = parseInt(goodsArr[i].price.slice(1,goodsArr[i].price.length)) * goodsArr[i].num;
 											sum_price += every_price;
 										}
 										$(".sum_price").html(sum_price);
+										
 									}
 								},
 								error: function(msg){

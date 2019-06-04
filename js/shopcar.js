@@ -135,7 +135,7 @@ define(["parabola", "jquery", "jquery-cookie"], function(parabola, $){
 							//拿到加载cookie中完整的商品数据以后，直接在页面上加载数据
 							var sum_price = 0;
 							for(var i = 0; i < goodsArr.length; i++){
-								var every_price = parseInt(goodsArr[i].price.slice(1,goodsArr[i].price.length));
+								var every_price = parseInt(goodsArr[i].price.slice(1,goodsArr[i].price.length) * goodsArr[i].num);
 								sum_price += every_price;
 							}
 							$(".price").html(sum_price);
@@ -243,7 +243,7 @@ define(["parabola", "jquery", "jquery-cookie"], function(parabola, $){
 				$.cookie("goods", JSON.stringify(cookieArr), {
 					expires: 7
 				})
-
+				sc_price();
 				//更新商品数量
 				$(".op-cart-number").html(sc_num());
 				sc_price();
